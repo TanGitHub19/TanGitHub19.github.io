@@ -1,0 +1,755 @@
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: #f1cf54;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+}
+
+.logo a {
+  margin-left: 60px;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: black;
+  font-family: "Rubik Moonrocks", sans-serif;
+}
+
+.links {
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.links li {
+  list-style: none;
+}
+
+.links a {
+  display: block;
+  font-size: 1.125rem;
+  text-decoration: none;
+  color: black;
+  padding: 0px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  width: 130px;
+  border-radius: 16px;
+  text-align: center;
+  margin-right: 1px;
+  letter-spacing: 0.1875rem;
+  font-family: "Koulen", sans-serif;
+}
+
+.links a:hover {
+  color: #fff;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #f1cf54;
+}
+
+.header-overlay {
+  position: absolute;
+  margin: 200px 0px 0 150px;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+.header-overlay h1 {
+  font-size: 6rem;
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  text-align: left;
+  margin: 30px 0px 0px 0px;
+  padding: 0%;
+  font-family: "Monoton", sans-serif;
+  animation: slide-in 3s ease forwards, colorChange 4s infinite;
+}
+
+.button {
+  display: inline-block;
+  color: black;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-family: "Bungee Shade", sans-serif;
+  position: relative;
+  animation: slide-in 3s ease forwards;
+}
+
+.button::before,
+.button::after {
+  content: ">";
+  color: black;
+  margin-right: 5px;
+}
+
+.button::after {
+  content: "<";
+  margin-left: 5px;
+}
+
+.button:hover::before,
+.button:hover::after {
+  color: red;
+}
+
+.button:hover {
+  color: white;
+}
+
+.animated-left {
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+}
+
+.animated-right {
+  animation-name: slide-in-right;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+}
+
+.animated-down {
+  animation-name: slide-in-down;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: auto;
+  padding: 50px 0;
+  margin: 0px 20px 0px 20px;
+}
+
+#Projects h1 {
+  font-size: 3.125rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 100px;
+  font-family: "Hepta Slab", serif;
+}
+.highlight {
+  color: #f1cf54;
+  font-weight: bold;
+}
+
+.project-item {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.project-item img {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 10px;
+  object-fit: fill;
+}
+
+.project-item h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: "Hepta Slab", serif;
+}
+
+.project-item p {
+  font-size: 0.9375rem;
+  color: #777;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: "Hepta Slab", serif;
+  padding: 0px 20px 0px 20px;
+}
+.project-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+#About {
+  padding-top: 8%;
+  height: auto;
+  padding-bottom: 10%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#about-me {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@keyframes border-animation {
+  0% {
+    border-color: #e2931b;
+  }
+  50% {
+    border-color: red;
+  }
+  100% {
+    border-color: #dfd548;
+  }
+}
+
+#about-me img {
+  max-width: auto;
+  width: 35%;
+  height: auto;
+  border-radius: 100%;
+  margin: 0px 100px 0px 200px;
+  border: solid #a7a9ac 15px;
+  animation: border-animation 3s infinite;
+  flex-direction: column;
+}
+
+#about-description {
+  margin-left: 20px;
+  max-width: 70%;
+}
+
+#about-description h1 {
+  font-size: 3.125rem;
+  color: #333;
+  font-family: "Hepta Slab", serif;
+  text-align: center;
+}
+
+#about-description p {
+  font-size: 1.2rem;
+  color: black;
+  font-family: "Hepta Slab", serif;
+  text-align: justify;
+  margin: 0px 100px 0px 100px;
+}
+
+#Contact {
+  padding: 50px 0;
+  margin: 0px 20px 0px 20px;
+}
+
+.contact-highlight {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #333;
+  font-family: "Hepta Slab", serif;
+}
+
+.contact-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 45%;
+  margin-right: 20px;
+}
+
+#contact-container {
+  font-family: "Hepta Slab", serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+.info-item {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f1cf54;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.info-item h2 {
+  margin-bottom: 10px;
+  font-family: "Koulen", sans-serif;
+}
+
+.info-item p {
+  margin: 5px 0;
+  font-family: "Hepta Slab", serif;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-family: "Hepta Slab", serif;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: "Hepta Slab", serif;
+  padding-left: 10px;
+  font-size: 0.9375rem;
+  cursor: pointer;
+}
+.contact-form input {
+  height: 50px;
+}
+.contact-form textarea {
+  height: 210px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Koulen", sans-serif;
+}
+
+.contact-form button:hover {
+  background-color: #dfd548;
+  color: black;
+}
+
+#Footer {
+  background-color: #f1cf54;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+#footer-logo p {
+  text-align: center;
+  margin: 0%;
+  padding: 5%;
+  text-decoration: none;
+  font-size: 3.125rem;
+  font-family: "Rubik Moonrocks", sans-serif;
+  color: black;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-icon {
+  margin: 0 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.media-icon:hover {
+  transform: scale(1.1);
+}
+
+.media-icon img {
+  transition: filter 0.3s ease;
+}
+
+.media-icon:hover img {
+  filter: brightness(80%);
+}
+
+#footer-copyright p {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Hepta Slab", serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    margin-left: 20px;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    background-color: #f1cf54;
+    width: 100%;
+    justify-content: center;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.1s ease;
+  }
+
+  .links.open {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .links li {
+    margin-bottom: 20px;
+  }
+
+  .links a {
+    width: 100%;
+    border-radius: 0;
+    font-family: "Hepta Slab", serif;
+    font-size: 1.875rem;
+  }
+
+  .hamburger-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .hamburger-icon .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .hamburger-icon .line:nth-child(1) {
+    top: 0;
+  }
+
+  .hamburger-icon .line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hamburger-icon .line:nth-child(3) {
+    bottom: 0;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle:checked + .hamburger-icon .line:nth-child(1) {
+    transform: translateY(14px) rotate(45deg);
+  }
+
+  #menu-toggle:checked + .hamburger-icon .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .hamburger-icon .line:nth-child(3) {
+    transform: translateY(-14px) rotate(-45deg);
+  }
+
+  #menu-toggle:checked ~ .links {
+    display: flex;
+  }
+
+  .header-overlay {
+    position: absolute;
+    margin: 200px 0px 0 100px;
+  }
+
+  #about-me {
+    flex-direction: column-reverse;
+  }
+
+  #about-me img {
+    margin-top: 50px;
+    order: 2;
+    margin-bottom: 20px;
+    margin-left: 130px;
+  }
+
+  #about-description {
+    order: 1;
+  }
+  .header-overlay h1 {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-overlay h1 {
+    font-size: 3.75rem;
+  }
+
+  #about-description p {
+    font-size: 0.9rem;
+  }
+
+  .info-item h2 {
+    margin-bottom: 10px;
+    font-size: 3.75;
+  }
+
+  .info-item p {
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo a {
+    font-size: 2rem;
+  }
+
+  .links a {
+    font-size: 1rem;
+  }
+
+  .hamburger-icon {
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .hamburger-icon .line {
+    height: 2px;
+  }
+
+  #menu-toggle:checked + .hamburger-icon .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  #menu-toggle:checked + .hamburger-icon .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .header-overlay {
+    position: absolute;
+    margin: 200px 0px 0px 50px;
+  }
+
+  .header-overlay h1 {
+    font-size: 3.2rem;
+  }
+
+  .button {
+    color: black;
+    font-size: 2.2rem;
+  }
+
+  #Projects h1 {
+    font-size: 1.5rem;
+  }
+
+  .project-item {
+    margin: 20px;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+  }
+
+  .project-item img {
+    width: 100%;
+    height: 100px;
+  }
+
+  .project-item h2 {
+    font-size: 1rem;
+  }
+
+  .project-item p {
+    font-size: 0.65rem;
+  }
+
+  #about-description h1 {
+    font-size: 1.5rem;
+  }
+
+  #about-description p {
+    font-size: 0.75rem;
+    margin: 0px 50px 0px 50px;
+  }
+
+  #Contact {
+    padding: 30px 0;
+    margin: 0 10px;
+  }
+
+  .contact-highlight {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-container {
+    max-width: 100%;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .info-item {
+    margin-bottom: 15px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  .contact-form input {
+    height: 40px;
+  }
+
+  .contact-form textarea {
+    height: 150px;
+  }
+
+  #footer-logo p {
+    font-size: 1.5rem;
+  }
+
+  social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .media-icon {
+    margin: 0 10px;
+  }
+
+  .media-icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #footer-copyright p {
+    font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .header-overlay {
+    position: absolute;
+    margin: 200px 0px 0px 50px;
+  }
+
+  .header-overlay h1 {
+    font-size: 2.5rem;
+    margin: 10px 0px 0px 0px;
+    line-height: 2;
+  }
+
+  .button {
+    color: black;
+    font-size: 1.7rem;
+  }
+}
